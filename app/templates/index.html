@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Clicker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main>
+        <h1>Auto Clicker</h1>
+        <div id="clickCount" class="counter">0</div>
+        
+        <div class="controls">
+            <label for="interval">Interval (ms):</label>
+            <input type="number" id="interval" min="10" max="10000" value="100">
+        </div>
+        
+        <button id="toggleBtn" class="btn start">Start</button>
+        <button id="resetBtn" class="btn reset" disabled>Reset</button>
+        
+        <p class="hint">Press Space to toggle</p>
+    </main>
+    
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
